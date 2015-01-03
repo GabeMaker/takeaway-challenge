@@ -32,8 +32,15 @@ describe User do
   end
 
   it 'can order everything in an array and return true if price correct' do
-    user.add_dish('pizza')
+    user.add_dish('mineral_water')
     user.add_dish('pasta')
-    expect(user.place_order(22)).to be true
+    expect(user.place_order(12)).to be true
   end
+
+  it 'raises error if false' do
+    user.add_dish('mineral_water')
+    user.add_dish('pasta')
+    expect { user.place_order(1) }.to raise_error('Error')
+  end
+
 end

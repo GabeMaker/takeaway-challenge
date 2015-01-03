@@ -26,7 +26,10 @@ class User
   end
 
   def place_order(total)
-    total == @order.inject(0) { |memo,item| memo + DISHLIST[item.to_sym]}
+    if total == @order.inject(0) { |memo,item| memo + DISHLIST[item.to_sym]}
+      true
+    else raise 'Error'
+    end
   end
 
 end
