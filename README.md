@@ -1,3 +1,3 @@
-Takeaway
-========
-Makers Academy Week 2 Challenge (part 2)
+# Takeaway Challenge
+
+In progress
